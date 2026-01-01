@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:safeaid_kh/ui/myapp.dart';
+import 'package:safeaid_kh/ui/my_app.dart';
 
 void main() {
   runApp(MaterialApp(
