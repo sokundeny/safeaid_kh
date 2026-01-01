@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:safeaid_kh/ui/myApp.dart';
+import 'package:safeaid_kh/ui/myapp.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme:ThemeData(
+      primaryColor: Colors.red
+    ),
+    home: MyApp(),
+  ));
 }
 
 
