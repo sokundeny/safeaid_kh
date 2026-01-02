@@ -44,9 +44,9 @@ class _MyAppState extends State<MyApp> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentScreen.index,
-        onTap: (value) {
+        onTap: (index) {
           setState(() {
-            _currentScreen = Screen.values[value];
+            _currentScreen = Screen.values[index];
           });
         },
         selectedItemColor: Colors.red,
