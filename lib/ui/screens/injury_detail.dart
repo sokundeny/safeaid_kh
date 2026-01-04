@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/injury.dart';
+import '../../domain/entities/injury.dart';
 
 class InjuryDetail extends StatefulWidget {
   final Injury injury;

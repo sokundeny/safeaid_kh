@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../data/injury_data.dart';
-import '../models/injury.dart';
+import '../../data/injury_data.dart';
+import '../../domain/entities/injury.dart';
 import '../widgets/injury_card.dart';
 import 'injury_detail.dart';
 

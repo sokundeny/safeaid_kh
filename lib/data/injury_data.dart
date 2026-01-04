@@ -1,6 +1,6 @@
-import '../models/injury_type.dart';
-import '../models/injury.dart';
-import '../models/first_aid_step.dart';
+import '../domain/entities/injury_type.dart';
+import '../domain/entities/injury.dart';
+import '../domain/entities/first_aid_step.dart';
 
 final List<InjuryType> injuryTypes = [
   InjuryType(
