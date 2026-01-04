@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:safeaid_kh/ui/screens/home.dart';
 import 'package:safeaid_kh/ui/screens/injury_list.dart';
 import 'package:safeaid_kh/ui/screens/history.dart';
+import 'package:safeaid_kh/ui/screens/hospital_list.dart';
 
 enum Screen{
   home,
@@ -27,9 +28,14 @@ class _MyAppState extends State<MyApp> {
         title: Text("Logo"),
         actions: [
           IconButton(
-            onPressed: (){}, 
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context)=>HospitalList()),
+              );
+            }, 
             icon: Icon(
-              Icons.map
+              Icons.local_hospital
             )
           )
         ],
