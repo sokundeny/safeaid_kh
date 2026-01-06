@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:safeaid_kh/domain/entities/app_manager.dart';
 import 'package:safeaid_kh/ui/my_app.dart';
+import 'package:safeaid_kh/data/hospital_data.dart';
+import 'package:safeaid_kh/data/user_data.dart';
+import 'package:safeaid_kh/data/question_data.dart';
+import 'package:safeaid_kh/data/injury_data.dart';
 
 void main() {
+
+  AppManager manager=AppManager(rootQuestion: rootQuestionNode);
+  manager.hospitals=mockHospitals;
+  manager.user=user;
+  manager.injuryTypes=injuryTypes;
+
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     theme:ThemeData(
@@ -17,7 +28,7 @@ void main() {
         error: Color(0xFFDC2626),
       ),
     ),
-    home: MyApp(),
+    home: MyApp(manager: manager,),
   ));
 }
 

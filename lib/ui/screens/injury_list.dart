@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:safeaid_kh/domain/entities/app_manager.dart';
 import 'package:safeaid_kh/ui/screens/specific_injury_list.dart';
-import '../../data/injury_data.dart';
 import '../../domain/entities/injury.dart';
 import '../widgets/injury_card.dart';
 
 class InjuryList extends StatelessWidget {
-  const InjuryList({super.key});
+
+  final AppManager manager;
+
+  const InjuryList({
+    super.key,
+    required this.manager
+    });
   @override
   Widget build(BuildContext context) {
-    final List<Injury> injuries = injuryTypes.expand((type) => type.injuries).toList();
+    final List<Injury> injuries = manager.injuryTypes.expand((type) => type.injuries).toList();
     return Scaffold(
       appBar: AppBar(title: const Text("Injury List"),
       centerTitle: true,),
