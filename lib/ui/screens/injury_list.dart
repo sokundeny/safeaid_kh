@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:safeaid_kh/ui/screens/specific_injury_list.dart';
 import '../../data/injury_data.dart';
 import '../../domain/entities/injury.dart';
 import '../widgets/injury_card.dart';
-import 'injury_detail.dart';
 
 class InjuryList extends StatelessWidget {
   const InjuryList({super.key});
@@ -27,13 +27,13 @@ class InjuryList extends StatelessWidget {
             return InjuryCard(
               injury: injury,
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => InjuryDetail(injury: injury),
-                  ),
-                );
-              },
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => SpecificInjuryList(injury: injuries[index]),
+                ),
+              );
+            },
             );
           },
         ),

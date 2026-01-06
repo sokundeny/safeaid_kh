@@ -63,7 +63,7 @@ class _InjuryDetailState extends State<InjuryDetail> {
                 (index) => AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
                   margin: const EdgeInsets.symmetric(horizontal: 4),
-                  width: currentIndex == index ? 16 : 8,
+                  width: currentIndex == index ? 60 : 15,
                   height: 8,
                   decoration: BoxDecoration(
                     color: currentIndex == index
@@ -130,7 +130,6 @@ class _InjuryDetailState extends State<InjuryDetail> {
               },
             ),
           ),
-          // naviga btn
           Padding(
             padding: const EdgeInsets.all(16),
             child: Row(
@@ -138,6 +137,7 @@ class _InjuryDetailState extends State<InjuryDetail> {
               children: [
                 if (currentIndex > 0)
                   ElevatedButton(
+                    
                     onPressed: previousStep,
                     child: const Text("Previous"),
                   )

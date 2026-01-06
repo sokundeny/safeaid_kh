@@ -6,12 +6,16 @@ class Injury {
   final String description;
   final String imagePath;
   final List<FirstAidStep> steps;
+  
+  final List<Injury> subInjuries;
 
   Injury({
     required this.id,
     required this.name,
     required this.description,
     required this.imagePath,
-    required this.steps,
+    this.steps = const [],
+    this.subInjuries = const [],
   });
 }
+
