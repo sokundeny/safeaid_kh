@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:safeaid_kh/domain/entities/injury.dart';
 import 'injury_detail.dart';
+import 'package:safeaid_kh/data/injuryIcon_data.dart';
 
 class SpecificInjuryList extends StatelessWidget {
   final Injury injury;
 
-  const SpecificInjuryList({super.key, required this.injury});
+  const SpecificInjuryList({
+    super.key,
+    required this.injury,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +43,6 @@ class SpecificInjuryList extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16),
                   boxShadow: [
                     BoxShadow(
-                      // ignore: deprecated_member_use
                       color: Colors.black.withOpacity(0.06),
                       blurRadius: 10,
                       offset: const Offset(0, 4),
@@ -52,17 +55,19 @@ class SpecificInjuryList extends StatelessWidget {
                       width: 56,
                       height: 56,
                       decoration: BoxDecoration(
-                        color: Colors.grey.shade200,
+                        color: Colors.red.shade50,
                         borderRadius: BorderRadius.circular(12),
-                        image: DecorationImage(
-                          image: AssetImage(sub.imagePath),
-                          fit: BoxFit.cover,
-                        ),
                       ),
+                      child: Icon(
+                            InjuryIconMapper.getIcon(sub.name),
+                            size: 30,
+                            color: Colors.red.shade400,
+                          ),
                     ),
+
                     const SizedBox(width: 16),
 
-                    // 📄 Text
+                    /// TEXT
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
