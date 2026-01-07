@@ -17,7 +17,8 @@ class InjuryList extends StatelessWidget {
     final List<Injury> injuries = manager.injuryTypes.expand((type) => type.injuries).toList();
     return Scaffold(
       appBar: AppBar(title: const Text("Injury List"),
-      centerTitle: true,),
+      centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: GridView.builder(
