@@ -80,7 +80,13 @@ class _QuestionFlowScreenState extends State<QuestionFlowScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Detect Injury")),
+      appBar: AppBar(
+        title: const Text("Detect Injury"),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+      ),
       body: Center(
         child: QuestionCard(
           node: currentNode!,
