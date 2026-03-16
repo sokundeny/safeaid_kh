@@ -1,16 +1,26 @@
-# safeaid_kh
+# SafeAid KH
 
-A new Flutter project.
+SafeAid KH is a mobile application built with Flutter that provides safety and emergency assistance tools for users in Cambodia.
 
-## Getting Started
+The application allows users to find first aid emergency and contact nearby hospital.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Emergency assistance request
+- answer question
+- get solution
+- Location-based services
+- Step by step emergency
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tech Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter
+- Dart
+
+## Installation
+
+```bash
+git clone https://github.com/sokundeny/safeaid_kh.git
+cd safeaid_kh
+flutter pub get
+flutter run
